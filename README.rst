@@ -21,10 +21,3 @@ Here is how it works:
   payment details on it. you need to add reference number on it and click on PAID and your payment has been done.
 
 
-Credits
-=======
-
-Authors
-~~~~~~~
-
-* Aditya Silver Oak Insttitute of Technology
