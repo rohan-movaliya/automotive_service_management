@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- records for automotive service product -->
+    <record id="automotive_accessories_1" model="automotive.accessories">
+        <field name="name">Car Wash</field>
+        <field name="service_charge">500</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/car wash.png"
+        />
+    </record>
+    <record id="automotive_accessories_2" model="automotive.accessories">
+        <field name="name">Tire Pressure</field>
+        <field name="service_charge">100</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/tire-pressure.png"
+        />
+    </record>
+    <record id="automotive_accessories_3" model="automotive.accessories">
+        <field name="name">Parts Cleaning</field>
+        <field name="service_charge">350</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/parts cleaning.png"
+        />
+    </record>
+    <record id="automotive_accessories_4" model="automotive.accessories">
+        <field name="name">Repair Engine</field>
+        <field name="service_charge">2000</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/repair engine.png"
+        />
+    </record>
+    <record id="automotive_accessories_5" model="automotive.accessories">
+        <field name="name">Repair Paddle</field>
+        <field name="service_charge">500</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/repair-paddle.png"
+        />
+    </record>
+    <record id="automotive_accessories_6" model="automotive.accessories">
+        <field name="name">Repair GearBox</field>
+        <field name="service_charge">1500</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Repair GearBox.png"
+        />
+    </record>
+    <record id="automotive_accessories_7" model="automotive.accessories">
+        <field name="name">Exchange Oil</field>
+        <field name="service_charge">100</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Exchange Oil.png"
+        />
+    </record>
+
+    <record id="automotive_accessories_8" model="automotive.accessories">
+        <field name="name">Air Filter</field>
+        <field name="accessories_name">Air Filter</field>
+        <field name="service_charge">300</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Air Filter.png"
+        />
+    </record>
+    <record id="automotive_accessories_9" model="automotive.accessories">
+        <field name="name">Engine Oil</field>
+        <field name="accessories_name">Engine Oil</field>
+        <field name="service_charge">750</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Engine Oil.png"
+        />
+    </record>
+    <record id="automotive_accessories_10" model="automotive.accessories">
+        <field name="name">Headlights, Turn Signals, Brake, And Parking Lights</field>
+        <field
+            name="accessories_name"
+        >Headlights, Turn Signals, Brake, And Parking Lights</field>
+        <field name="service_charge">1000</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/HEADLIGHTS_-TURN-SIGNALS_-BRAKE_-AND-PARKING-LIGHTS.png"
+        />
+    </record>
+    <record id="automotive_accessories_11" model="automotive.accessories">
+        <field name="name">Spark Plugs</field>
+        <field name="accessories_name">Spark Plugs</field>
+        <field name="service_charge">300</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/SPARK PLUGS.png"
+        />
+    </record>
+    <record id="automotive_accessories_12" model="automotive.accessories">
+        <field name="name">Windshield Wipers</field>
+        <field name="accessories_name">Windshield Wipers</field>
+        <field name="service_charge">500</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/WINDSHIELD-WIPERS.png"
+        />
+    </record>
+    <record id="automotive_accessories_13" model="automotive.accessories">
+        <field name="name">Battery</field>
+        <field name="accessories_name">Battery</field>
+        <field name="service_charge">1000</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/BATTERY.png"
+        />
+    </record>
+    <record id="automotive_accessories_14" model="automotive.accessories">
+        <field name="name">Tire-1</field>
+        <field name="accessories_name">Tire</field>
+        <field name="service_charge">600</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/TIRES-1.png"
+        />
+    </record>
+    <record id="automotive_accessories_15" model="automotive.accessories">
+        <field name="name">Music System</field>
+        <field name="accessories_name">Music System With Display</field>
+        <field name="service_charge">700</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Music System.png"
+        />
+    </record>
+    <record id="automotive_accessories_16" model="automotive.accessories">
+        <field name="name">Seat Cover</field>
+        <field name="accessories_name">Seat Cover</field>
+        <field name="service_charge">400</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Seat Cover.png"
+        />
+    </record>
+    <record id="automotive_accessories_17" model="automotive.accessories">
+        <field name="name">Car Charger</field>
+        <field name="accessories_name">Car Charger With Cable</field>
+        <field name="service_charge">50</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Car Charger.png"
+        />
+    </record>
+    <record id="automotive_accessories_18" model="automotive.accessories">
+        <field name="name">Car Pick Up/Drop Service</field>
+        <field name="accessories_name">Car Pick Up/Drop Service</field>
+        <field name="service_charge">300</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/car_tow.png"
+        />
+    </record>
+
+    <!-- records for automotive mechanic  -->
+    <record id="automotive_mechanic_1" model="automotive.mechanic">
+        <field name="name">Zoie Rosales</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Zoie Rosales.png"
+        />
+    </record>
+    <record id="automotive_mechanic_2" model="automotive.mechanic">
+        <field name="name">Leonard Christensen</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Leonard Christensen.png"
+        />
+    </record>
+    <record id="automotive_mechanic_3" model="automotive.mechanic">
+        <field name="name">Riley Lambert</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Riley Lambert.png"
+        />
+    </record>
+    <record id="automotive_mechanic_4" model="automotive.mechanic">
+        <field name="name">Hudson Silva</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Hudson Silva.png"
+        />
+    </record>
+    <record id="automotive_mechanic_5" model="automotive.mechanic">
+        <field name="name">Keira Chang</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Keira Chang.png"
+        />
+    </record>
+    <record id="automotive_mechanic_6" model="automotive.mechanic">
+        <field name="name">Elijah Marsh</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Elijah Marsh.png"
+        />
+    </record>
+    <record id="automotive_mechanic_7" model="automotive.mechanic">
+        <field name="name">Lawrence Gibson</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Lawrence Gibson.png"
+        />
+    </record>
+    <record id="automotive_mechanic_8" model="automotive.mechanic">
+        <field name="name">Adrian Atkins</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Adrian Atkins.png"
+        />
+    </record>
+    <record id="automotive_mechanic_9" model="automotive.mechanic">
+        <field name="name">William Ayers</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/William Ayers.png"
+        />
+    </record>
+    <record id="automotive_mechanic_10" model="automotive.mechanic">
+        <field name="name">Royalty Hopkins</field>
+        <field
+            name="image_256"
+            type="base64"
+            file="automotive_service_management/static/description/images/Royalty Hopkins.png"
+        />
+    </record>
+</odoo>

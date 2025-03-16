@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- book appointmnet form view  -->
+    <record model="ir.ui.view" id="book_appointment_form_view">
+        <field name="name">book_appointment_form_view</field>
+        <field name="model">book.appointment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="mobile_number" widget="phone" />
+                            <field name="customer_mail" widget="email" />
+                            <field name="car_model" />
+                            <field name="car_number" />
+                        </group>
+                        <group>
+                            <field
+                                name="appointment_date"
+                                options="{'datepicker': {'minDate': 'now'}}"
+                            />
+                            <field name="select_service" widget="many2many_tags" />
+                            <field name="pick_up_address" />
+                            <field name="drop_address" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button
+                            name="action_book_appointment"
+                            string="Book"
+                            class="btn-primary"
+                            type="object"
+                            data-hotkey="v"
+                        />
+                        <button
+                            string="Discard"
+                            class="btn-secondary"
+                            special="cancel"
+                            data-hotkey="z"
+                        />
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- book appointmnet action window  -->
+    <record model="ir.actions.act_window" id="action_book_appointment">
+        <field name="name">Book Service Appointments</field>
+        <field name="res_model">book.appointment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

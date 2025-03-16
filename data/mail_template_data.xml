@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- mail template for remainder for service appointment of car -->
+    <record id="service_appointment_mail" model="mail.template">
+        <field name="name">Service Appointment Mail</field>
+        <field
+            name="model_id"
+            ref="automotive_service_management.model_service_appointment"
+        />
+        <field name="auto_delete" eval="False" />
+        <field name="email_from">{{ user.email }}</field>
+        <field name="email_to">{{ object.customer_mail }}</field>
+        <field name="subject">Service Appointment Remainder</field>
+        <field name="body_html">
+           Dear sir,
+           We Inform You That,
+           Today Is Your Appointment For Car service,
+           Thank You
+        </field>
+    </record>
+
+    <!-- mail template for remainder for serviced car pick up mail of car  -->
+    <record id="serviced_car_mail" model="mail.template">
+        <field name="name">Serviced Car Mail</field>
+        <field
+            name="model_id"
+            ref="automotive_service_management.model_service_appointment"
+        />
+        <field name="subject">Serviced Car Pick Up Mail</field>
+        <field name="auto_delete" eval="False" />
+        <field name="email_from">{{ user.email }}</field>
+        <field name="email_to">{{ object.customer_mail }}</field>
+        <field name="body_html">
+           Dear sir,
+           We Inform You That,
+           Your car is successfully repaired from our mechanic.
+           Thank You.
+        </field>
+    </record>
+</odoo>

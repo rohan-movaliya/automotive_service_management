@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- xml record for sequence of appointments  -->
+    <record id="service_appointment_appointment_number" model="ir.sequence">
+        <field name="name">Appointment Number</field>
+        <field name="code">service.appointment</field>
+        <field name="prefix">AP0</field>
+        <field name="number_increment" eval="1" />
+    </record>
+</odoo>

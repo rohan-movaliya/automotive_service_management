@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- main menu for automotive service management -->
+    <menuitem name="Automotive Service" id="automotive_service_management" />
+
+    <!-- menu for service appointment -->
+    <menuitem
+        name="Service Appointments"
+        id="service_appointment"
+        parent="automotive_service_management"
+        action="action_service_appointment"
+        sequence="1"
+    />
+
+    <!-- menu for appointment window  -->
+    <menuitem
+        name="Appointments Window"
+        id="automotive_appointment_window"
+        parent="automotive_service_management"
+        sequence="2"
+    />
+
+    <!-- menu for book service appointment  -->
+    <menuitem
+        name="Book Appointment"
+        id="book_appointment"
+        parent="automotive_appointment_window"
+        action="action_book_appointment"
+    />
+
+    <!-- menu for cancel service appointment -->
+    <menuitem
+        name="Cancel Appointment"
+        id="cancel_appointment"
+        parent="automotive_appointment_window"
+        action="action_cancel_appointment"
+    />
+
+    <!-- menu for configuration of automotive services -->
+    <menuitem
+        name="Configuration"
+        id="automotive_service_configuration"
+        parent="automotive_service_management"
+    />
+
+    <!-- menu for automotive accessories  -->
+    <menuitem
+        name="Accessories"
+        id="automotive_accessories"
+        parent="automotive_service_configuration"
+        action="action_automotive_accessories"
+    />
+
+    <!-- menu for automotive mechanics  -->
+    <menuitem
+        name="Mechanics"
+        id="automotive_mechanics"
+        parent="automotive_service_configuration"
+        action="action_automotive_mechanic"
+    />
+</odoo>

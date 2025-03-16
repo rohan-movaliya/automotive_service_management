@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- service appointment list view -->
+    <record model="ir.ui.view" id="service_appointment_list_view">
+        <field name="name">service_appointment_list_view</field>
+        <field name="model">service.appointment</field>
+        <field name="arch" type="xml">
+            <tree
+                default_order="id desc"
+                decoration-success="state == 'payment_done'"
+                decoration-danger="state != 'payment_done'"
+            >
+                <field name="appointment_number" />
+                <field name="name" />
+                <field name="car_model" />
+                <field name="car_number" />
+                <field name="appointment_date" />
+                <field name="delivery_date" />
+                <field name="assigned_mechanic_id" />
+                <field name="state" invisible="1" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- service appointment form view  -->
+    <record model="ir.ui.view" id="service_appointment_form_view">
+        <field name="name">service_appointment_form_view</field>
+        <field name="model">service.appointment</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="button_in_service"
+                        class="oe_highlight"
+                        states="appointed"
+                        string="In Service"
+                        type="object"
+                    />
+
+                    <button
+                        name="button_serviced"
+                        class="oe_highlight"
+                        states="in_service"
+                        string="Serviced"
+                        type="object"
+                    />
+
+                    <button
+                        name="%(automotive_service_management.action_service_payment)d"
+                        class="oe_highlight"
+                        states="serviced"
+                        string="Payment Done"
+                        type="action"
+                    />
+
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="appointed,in_service,serviced,payment_done"
+                    />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="appointment_number" />
+                            <field name="name" />
+                            <field name="contact_number" widget="phone" />
+                            <field name="customer_mail" widget="email" />
+                            <field name="car_model" />
+                            <field name="car_number" />
+                        </group>
+                        <group>
+                            <field name="appointment_date" />
+                            <field name="delivery_date" />
+                            <field name="assigned_mechanic_id" />
+                            <field name="pick_up_address" />
+                            <field name="drop_address" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Services">
+                            <field
+                                name="car_sevices_ids"
+                                attrs="{'readonly': [('state', '!=', 'appointed')]}"
+                            />
+                        </page>
+                    </notebook>
+                    <group>
+                        <group>
+                            <field
+                                name="payment_reference_number"
+                                attrs="{'invisible': [('state','!=','payment_done')] }"
+                            />
+                            <field
+                                name="customer_feedback"
+                                widget="priority"
+                                attrs="{'invisible': [('state','!=','payment_done')] }"
+                            />
+                        </group>
+                        <group>
+                            <field name="total_cost" />
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                    <field name="activity_ids" widget="mail_activity" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- service appointment calendar view  -->
+    <record id="service_appointment_calendar_view" model="ir.ui.view">
+        <field name="name">service_appointment_calendar_view</field>
+        <field name="model">service.appointment</field>
+        <field name="type">calendar</field>
+        <field name="arch" type="xml">
+            <calendar string="Appointment" date_start="appointment_date" mode="month">
+                <field name="name" />
+            </calendar>
+        </field>
+    </record>
+
+    <!-- service appointment search view  -->
+    <record model="ir.ui.view" id="service_appointment_search_view">
+        <field name="name">service_appointment_search_view</field>
+        <field name="model">service.appointment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="appointment_number" />
+                <field name="name" />
+                <field name="car_model" />
+                <field name="car_number" />
+                <field name="appointment_date" />
+                <field name="delivery_date" />
+                <field name="assigned_mechanic_id" />
+                <field name="state" />
+            </search>
+        </field>
+    </record>
+
+    <!-- cron job for send mail to customer that have today service appointment  -->
+    <record id="send_mail_service_appointment" model="ir.cron">
+       <field name="name">Mail</field>
+       <field name="model_id" ref="model_service_appointment" />
+       <field name="state">code</field>
+       <field name="code">model.action_send_mail()</field>
+       <field name="user_id" ref="base.user_root" />
+       <field name="interval_number">1</field>
+       <field name="interval_type">days</field>
+       <field name="numbercall">-1</field>
+       <field name="doall">True</field>
+   </record>
+
+
+   <!-- service appointment action window  -->
+    <record model="ir.actions.act_window" id="action_service_appointment">
+        <field name="name">Service Appointments</field>
+        <field name="res_model">service.appointment</field>
+        <field name="view_mode">tree,form,calendar</field>
+    </record>
+</odoo>

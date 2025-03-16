@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- automotive accessories list view  -->
+    <record model="ir.ui.view" id="automotive_accessories_list_view">
+        <field name="name">automotive_accessories_list_view</field>
+        <field name="model">automotive.accessories</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="service_charge" />
+                <field name="accessories_name" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- automotive accessories form view  -->
+    <record model="ir.ui.view" id="automotive_accessories_form_view">
+        <field name="name">automotive_accessories_form_view</field>
+        <field name="model">automotive.accessories</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="service_charge" />
+                            <field name="accessories_name" />
+                        </group>
+                        <group>
+                            <field
+                                name="image_256"
+                                widget="image"
+                                class="oe_avatar"
+                                options="{'preview_image': 'image_128'}"
+                            />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- automotive accessories kanban view  -->
+    <record id="automotive_accessories_kanban_view" model="ir.ui.view">
+        <field name="name">automotive_accessories_kanban_view</field>
+        <field name="model">automotive.accessories</field>
+        <field name="type">kanban</field>
+        <field name="arch" type="xml">
+            <kanban class="o_res_partner_kanban">
+                <field
+                    name="image_256"
+                    widget="image"
+                    class="oe_avatar"
+                    options="{'preview_image': 'image_128'}"
+                />
+                <field name="name" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="oe_kanban_details">
+                                <strong class="o_kanban_record_title">
+                                    <field
+                                        name="image_256"
+                                        widget="image"
+                                        class="oe_avatar"
+                                        options="{'preview_image': 'image_128'}"
+                                    />
+                                </strong>
+                                <group>
+                                    <group>
+                                        <field name="name" />
+                                    </group>
+                                </group>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- automotive accessories search view  -->
+    <record model="ir.ui.view" id="automotive_accessories_search_view">
+        <field name="name">automotive_accessories_search_view</field>
+        <field name="model">automotive.accessories</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="service_charge" />
+                <field name="accessories_name" />
+            </search>
+        </field>
+    </record>
+
+    <!-- automotive accessories action window  -->
+    <record model="ir.actions.act_window" id="action_automotive_accessories">
+        <field name="name">Accessories</field>
+        <field name="res_model">automotive.accessories</field>
+        <field name="view_mode">kanban,list,form</field>
+    </record>
+</odoo>
